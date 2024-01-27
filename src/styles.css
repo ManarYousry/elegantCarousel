@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { height: 100%; }
+*{box-sizing: border-box;}
+body { margin: 0; font-family: 'ZCOOL XiaoWei', serif !important; }
+:root{
+  --main-color:rgb(30, 182, 196);
+  --seconed-color:#737373 ;
+  --third-color:#f8f9fa ;
+  --body-color:#f1f1f1;
+
+
+}
+button{
+    outline: none !important;
+
+}
+button.p-button{
+  border:0;
+  outline: none !important;
+}
+
+button.p-button:focus{
+  border:0;
+  outline: none !important;
+}
+
+.full-width {
+    width: 100%;
+}
+.hide{
+    display: none;
+}
+.bg-main{
+  background-color: var(--main-color) !important;
+  color:#fff !important;
+}
+.text-main{
+  color: var(--seconed-color) !important;
+}
+.body-main{
+  background-color: var(--body-color);
+}
+

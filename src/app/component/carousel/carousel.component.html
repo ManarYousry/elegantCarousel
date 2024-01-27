@@ -1,0 +1,21 @@
+<div class="relative h-full w-full" *ngIf="slides && slides.length > 0">
+  <div>
+    <div (click)="Previous()" class="absolute text-5xl top-1/2 transform -translate-y-1/2 left-8  md:left-8 sm:left-3 text-white z-10 opacity-80 transition-all duration-150 ease-in hover:opacity-90 active:opacity-90 cursor-pointer">
+      ❰
+    </div>
+    <div (click)="Next()" class="absolute text-5xl top-1/2 transform -translate-y-1/2 right-8 md:right-8 sm:right-3 text-white z-10 opacity-80 transition-all duration-150 ease-in hover:opacity-90 active:opacity-90 cursor-pointer">
+      ❱
+    </div>
+  </div>
+  <div [@fade] class="w-full h-full rounded-10   bg-center bg-fixed" [ngStyle]="{ 'background-image': getCurrentSlideUrl(),
+'backgroundSize': '100% 100%' }">
+    <div class="absolute w-full bottom-10 ">
+      <div class="mx-auto w-1/2 sm:w-full flex justify-center">
+        <ng-container *ngFor="let slide of slides; let slideIndex = index">
+          <div class="m-0 mx-2 h-5 w-5 dot cursor-pointer rounded-full bg-white opacity-50 transition-opacity duration-600 ease" (click)="navigateToSlide(slideIndex)" [ngClass]="{'active': currentIndex== slideIndex}">
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
